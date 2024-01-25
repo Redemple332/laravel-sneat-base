@@ -2,6 +2,8 @@
 echo "Running composer"
 composer global require hirak/prestissimo
 composer install --working-dir=/var/www/html
+npm install && npm run dev --working-dir=/var/www/html
+
 
 php artisan key:generate
 echo "Generate key"
@@ -12,6 +14,3 @@ php artisan config:cache
 
 echo "Caching routes..."
 php artisan route:cache
-
-echo "add npm install && npm run dev"
-npm install && npm run dev
