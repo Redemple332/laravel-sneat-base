@@ -1,7 +1,5 @@
 FROM richarvey/nginx-php-fpm:latest
 
-RUN apk update && apk add nodejs npm
-
 COPY . .
 
 # Image config
@@ -13,7 +11,7 @@ ENV REAL_IP_HEADER 1
 
 
 # Laravel config
-ENV APP_KEY base64:Fu6lOrU7wx2kGSCWae2Lth4aVFiRC60pLhRupoK7PpY=
+ENV APP_KEY base64:mln1keRjYJYz06TPXJg8SZhJ7JN+oToy08vrPQhoq78=
 ENV APP_ENV production
 ENV APP_DEBUG true
 
